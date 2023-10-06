@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/students")
@@ -24,5 +25,11 @@ public class StudentController {
     public Student createUser(@RequestBody Student student)
     {
         return studentService.createUser(student);
+    }
+
+    @GetMapping("/{studentId}")
+    public Optional<Student> findById(Integer studentId)
+    {
+        return studentService.findById(studentId);
     }
 }
