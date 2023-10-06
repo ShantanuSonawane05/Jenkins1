@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Jenkins1Application {
 
 	public static void main(String[] args) {
-		System.out.println("Project is Runnig");
+		System.out.println("Project is Runnig with Maven Build");
 		SpringApplication.run(Jenkins1Application.class, args);
 	}
 
